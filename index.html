@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Georgi Gardev</title>
+        <link rel="stylesheet" href="stylesheets/style.css" />
+        <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+        <script src="javascripts/player.js"></script>
+        <script src="javascripts/game.js"></script>
+        <script src="javascripts/ai.js"></script>
+        <script src="javascripts/ui.js"></script>
+        <script src="javascripts/main.js"></script>
+
+        <meta name="author" content="Georgi Gardev" />
+        <meta name="owner" content="Georgi Gardev" />
+        <meta name="description" content="Personal Homepage of Georgi Gardev" />
+        <meta name="copyright" content="Georgi Gardev 2014" />
+        <meta name="robots" content="index, follow" />
+        <meta name="revisit-after" content="2 days" />
+        <meta name="GOOGLEBOT" content="index, follow, all" />
+        <meta name="audience" content="all" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#19C4FF">
+    </head>
+    <body>
+        <main>
+            <h1>Georgi Gardev</h1>
+            <p>
+                Hi! I'm currently working on this page,<br /> but you can play some Tic-Tac-Toe instead!
+            </p>
+            <p>
+                <a href="mailto:georgi@gardev.com" class="social" target="_blank" title="Send me an email!">
+                    <i class="fa fa-envelope-square fa-3x"></i>
+                </a>
+                <a href="https://github.com/GeorgeSG" class="social" target="_blank" title="GitHub">
+                    <i class="fa fa-github-square fa-3x"></i>
+                </a>
+                <a href="https://bitbucket.org/GeorgeSG" class="social" target="_blank" title="Bitbucket">
+                    <i class="fa fa-bitbucket-square fa-3x"></i>
+                </a>
+                <a href="https://www.linkedin.com/profile/view?id=154844036" class="social" target="_blank" title="LinkedIn">
+                    <i class="fa fa-linkedin-square fa-3x"></i>
+                </a>
+                <a href="http://steamcommunity.com/id/georgesg/" class="social" target="_blank" title="PC Master Race!">
+                    <i class="fa fa-steam-square fa-3x"></i>
+                </a>
+                <a href="https://twitter.com/georgesg92" class="social" target="_blank" title="twitter">
+                    <i class="fa fa-twitter-square fa-3x"></i>
+                </a>
+                <a href="http://www.last.fm/user/GeorgeSG" class="social" target="_blank" title="last.fm">
+                    <i class="fa fa-lastfm-square fa-3x"></i>
+                </a>
+            </p>
+            <nav>
+                <fieldset id="difficulty">
+                    <label for="easy">
+                        <input type="radio" name="difficulty" id="easy">easy
+                    </label><label for="normal" class="checked">
+                        <input type="radio" name="difficulty" id="normal" checked="checked">normal
+                    </label><label for="hard">
+                        <input type="radio" name="difficulty" id="hard">hard
+                    </label>
+                </fieldset>
+            </nav>
+
+            <div id="board">
+                <input type="button" data-x="0" data-y="0" class="box unplaced">
+                <input type="button" data-x="0" data-y="1" class="box unplaced">
+                <input type="button" data-x="0" data-y="2" class="box unplaced">
+                <input type="button" data-x="1" data-y="0" class="box unplaced">
+                <input type="button" data-x="1" data-y="1" class="box unplaced">
+                <input type="button" data-x="1" data-y="2" class="box unplaced">
+                <input type="button" data-x="2" data-y="0" class="box unplaced">
+                <input type="button" data-x="2" data-y="1" class="box unplaced">
+                <input type="button" data-x="2" data-y="2" class="box unplaced">
+            </div>
+
+            <button id="new-game">new game</button>
+            <p id="result"></p>
+
+            <div id="stats">
+                <h2>stats</h2>
+                <table>
+                    <tr>
+                        <td>wins</td><td id="wins-count" class="count">0</td>
+                    </tr>
+                    <tr>
+                        <td>draws</td><td id="draws-count" class="count">0</td>
+                    </tr>
+                    <tr>
+                        <td>losses</td><td id="losses-count" class="count">0</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    </body>
+</html>
