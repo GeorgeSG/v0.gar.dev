@@ -1,0 +1,19 @@
+{
+  "extends": "@nuxt/typescript",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "paths": {
+      "~/plugins/*": ["./plugins/*"],
+      "~/components/*": ["./components/*"],
+      "~/pages/*": ["./pages/*"],
+      "~/assets/*": ["./assets/*"],
+    },
+    "strictPropertyInitialization": false,
+    "strict": true,
+    "types": [
+      "@types/node",
+      "@nuxt/vue-app"
+    ],
+  },
+}
