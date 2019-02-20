@@ -33,10 +33,9 @@ export default {
         ]
       }
     ]
-    // ['@nuxtjs/proxy', { pathRewrite: { '^/hui': 'https://georgesg.github.io/ecmascript-explained-2019/' } }]
   ],
   proxy: {
-    '/ecmascript-explained-2019': {
+    '/ecmascript-explained-2019/': {
       target: 'https://georgesg.github.io/ecmascript-explained-2019/',
       pathRewrite: {
         '^/ecmascript-explained-2019': '/'
