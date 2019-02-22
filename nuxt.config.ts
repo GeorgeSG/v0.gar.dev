@@ -36,13 +36,5 @@ export default {
         ]
       }
     ]
-  ],
-  proxy: {
-    '/ecmascript-explained-2019/': {
-      target: 'https://georgesg.github.io/ecmascript-explained-2019/',
-      pathRewrite: {
-        '^/ecmascript-explained-2019': '/'
-      }
-    }
-  }
+  ]
 };
