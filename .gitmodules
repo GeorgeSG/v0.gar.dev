@@ -1,0 +1,3 @@
+[submodule "static/ecmascript-explained-2019"]
+	path = static/ecmascript-explained-2019
+	url = git@github.com:GeorgeSG/ecmascript-explained-2019.git
