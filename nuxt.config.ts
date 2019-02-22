@@ -1,5 +1,8 @@
 export default {
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
     title: 'Georgi Gardev',
     meta: [
       { charset: 'utf-8' },
