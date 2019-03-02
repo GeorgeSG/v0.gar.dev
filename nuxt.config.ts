@@ -19,7 +19,6 @@ export default {
   },
   css: [{ lang: 'scss', src: '@/assets/styles/main.scss' }],
   modules: [
-    '@nuxtjs/proxy',
     [
       'nuxt-fontawesome',
       {

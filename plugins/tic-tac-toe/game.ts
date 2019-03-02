@@ -38,7 +38,7 @@ export default class Game {
     return this.board[this.toIndex(x, y)] === null;
   }
 
-  makeMove(x: number, y: number): void {
+  makeMove(x: number, y: number) {
     this.lastMove = [x, y];
     this.board[this.toIndex(x, y)] = this.currentPlayer.token;
     this.currentPlayer = this.nextPlayer();

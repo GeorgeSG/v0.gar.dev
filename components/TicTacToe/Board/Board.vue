@@ -15,7 +15,7 @@ import { CellState } from '~/plugins/tic-tac-toe/cell-state';
 
 @Component({ components: { Cell } })
 export default class Board extends Vue {
-  @Prop({required: true})
+  @Prop({ required: true })
   cellStates: CellState[];
 
   @Prop({ required: false, default: false })

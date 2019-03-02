@@ -5,7 +5,7 @@ export class AI {
 
   constructor(private game: Game, public difficulty: AI.Difficulty = 'normal') {}
 
-  move(): void {
+  move() {
     const move = this.chooseMove();
     this.game.makeMove(move[0], move[1]);
   }

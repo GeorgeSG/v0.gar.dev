@@ -29,8 +29,7 @@ import { Component, Vue } from 'vue-property-decorator';
 import TicTacToe from '~/components/TicTacToe/TicTacToe.vue';
 
 @Component({ components: { TicTacToe } })
-export default class Home extends Vue {
-}
+export default class Home extends Vue {}
 </script>
 
 <style lang="scss">

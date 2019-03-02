@@ -50,7 +50,7 @@ export default class TicTacToe extends Vue {
   private game: Game;
   private ai: AI;
 
-  @Watch('difficulty', { immediate: true})
+  @Watch('difficulty', { immediate: true })
   onDifficultyChange(newDifficulty: AI.Difficulty) {
     if (this.ai) {
       this.ai.difficulty = newDifficulty;
@@ -126,10 +126,9 @@ export default class TicTacToe extends Vue {
     color: #fff;
   }
 
-   &:active {
+  &:active {
     box-shadow: inset 0px 0px 83px 0px rgba(0,0,0,0.38);
   }
-
 }
 
 .difficulty {
