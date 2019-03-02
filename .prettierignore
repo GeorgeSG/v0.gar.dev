@@ -1,0 +1,13 @@
+.nuxt/**
+assets/**
+dist/**
+node_modules/**
+plugins/ga.js
+static/**
+submodules/**
+
+.prettierignore
+.git*
+Makefile
+yarn.lock
+

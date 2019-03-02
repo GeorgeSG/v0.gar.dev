@@ -1,5 +1,5 @@
-import { CellState } from './cell-state';
-import Player from './player';
+import { CellState } from "./cell-state";
+import Player from "./player";
 
 export default class Game {
   private static readonly WINNING_STATES = [
@@ -13,10 +13,11 @@ export default class Game {
     [2, 4, 6]
   ];
 
-  private board: CellState[] = [null, null, null, null, null, null, null, null, null];
   public currentPlayer: Player;
   public winner: Player | null = null;
   public lastMove: number[];
+
+  private board: CellState[] = [null, null, null, null, null, null, null, null, null];
 
   constructor(public firstPlayer: Player, public players: Player[] = [Player.HUMAN, Player.AI]) {
     this.currentPlayer = firstPlayer;
@@ -45,15 +46,15 @@ export default class Game {
   }
 
   nextPlayer(): Player {
-    return this.players.find((player) => player !== this.currentPlayer) as Player;
+    return this.players.find(player => player !== this.currentPlayer) as Player;
   }
 
   remainingMoves(): number {
-    return this.board.filter((e) => e === null).length;
+    return this.board.filter(e => e === null).length;
   }
 
   isInWinningState(): boolean {
-    return Game.WINNING_STATES.some((winningState) => {
+    return Game.WINNING_STATES.some(winningState => {
       return (
         this.board[winningState[0]] !== null &&
         this.board[winningState[0]] === this.board[winningState[1]] &&

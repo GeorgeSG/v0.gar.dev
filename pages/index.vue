@@ -25,8 +25,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import TicTacToe from '~/components/TicTacToe/TicTacToe.vue';
+import { Component, Vue } from "vue-property-decorator";
+import TicTacToe from "~/components/TicTacToe/TicTacToe.vue";
 
 @Component({ components: { TicTacToe } })
 export default class Home extends Vue {}
@@ -40,7 +40,7 @@ export default class Home extends Vue {}
   border-radius: 5px;
 
   &:hover {
-    color: #0085B2;
+    color: #0085b2;
   }
 
   &:active {

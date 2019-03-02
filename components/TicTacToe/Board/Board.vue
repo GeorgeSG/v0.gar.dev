@@ -9,9 +9,9 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator';
-import Cell from './Cell/Cell.vue';
-import { CellState } from '~/plugins/tic-tac-toe/cell-state';
+import { Component, Vue, Prop } from "vue-property-decorator";
+import Cell from "./Cell/Cell.vue";
+import { CellState } from "~/plugins/tic-tac-toe/cell-state";
 
 @Component({ components: { Cell } })
 export default class Board extends Vue {

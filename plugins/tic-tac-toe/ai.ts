@@ -1,9 +1,9 @@
-import Game from './game';
+import Game from "./game";
 
 export class AI {
   private static readonly INFINITY = 9;
 
-  constructor(private game: Game, public difficulty: AI.Difficulty = 'normal') {}
+  constructor(private game: Game, public difficulty: AI.Difficulty = "normal") {}
 
   move() {
     const move = this.chooseMove();
@@ -12,15 +12,15 @@ export class AI {
 
   private chooseMove(): number[] {
     switch (this.difficulty) {
-      case 'easy':
+      case "easy":
         return this.randomChoice(this.game);
-      case 'normal':
+      case "normal":
         if (this.randomInt(0, 10) > 4) {
           return this.alphabetaChoice(this.game);
         } else {
           return this.randomChoice(this.game);
         }
-      case 'hard':
+      case "hard":
         return this.alphabetaChoice(this.game);
     }
   }
@@ -86,14 +86,12 @@ export class AI {
   }
 
   private maximize(alpha: number, beta: number, moves: Game[]) {
-    let result = {
+    const result = {
       score: alpha,
       game: moves[0]
     };
 
-    for (let i = 0; i < moves.length; i++) {
-      const move = moves[i];
-
+    for (const move of moves) {
       const alphabeta = this.alphabeta(move, alpha, beta);
       if (alpha < alphabeta.score) {
         alpha = alphabeta.score;
@@ -110,14 +108,12 @@ export class AI {
   }
 
   private minimize(alpha: number, beta: number, moves: Game[]) {
-    let result = {
+    const result = {
       score: beta,
       game: moves[0]
     };
 
-    for (let i = 0; i < moves.length; i++) {
-      const move = moves[i];
-
+    for (const move of moves) {
       const alphabeta = this.alphabeta(move, alpha, beta);
       if (beta > alphabeta.score) {
         beta = alphabeta.score;
@@ -139,5 +135,5 @@ export class AI {
 }
 
 export namespace AI {
-  export type Difficulty = 'easy' | 'normal' | 'hard';
+  export type Difficulty = "easy" | "normal" | "hard";
 }

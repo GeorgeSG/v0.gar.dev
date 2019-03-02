@@ -7,13 +7,10 @@
       "~/plugins/*": ["./plugins/*"],
       "~/components/*": ["./components/*"],
       "~/pages/*": ["./pages/*"],
-      "~/assets/*": ["./assets/*"],
+      "~/assets/*": ["./assets/*"]
     },
     "strictPropertyInitialization": false,
     "strict": true,
-    "types": [
-      "@types/node",
-      "@nuxt/vue-app"
-    ],
-  },
+    "types": ["@types/node", "@nuxt/vue-app"]
+  }
 }

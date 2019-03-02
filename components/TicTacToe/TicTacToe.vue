@@ -28,29 +28,29 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Watch } from 'vue-property-decorator';
-import Board from './Board/Board.vue';
-import Game from '~/plugins/tic-tac-toe/game';
-import { AI } from '~/plugins/tic-tac-toe/ai';
-import Player from '~/plugins/tic-tac-toe/player';
-import { CellState } from '~/plugins/tic-tac-toe/cell-state';
+import { Component, Vue, Watch } from "vue-property-decorator";
+import Board from "./Board/Board.vue";
+import Game from "~/plugins/tic-tac-toe/game";
+import { AI } from "~/plugins/tic-tac-toe/ai";
+import Player from "~/plugins/tic-tac-toe/player";
+import { CellState } from "~/plugins/tic-tac-toe/cell-state";
 
-@Component({ components: { Board }})
+@Component({ components: { Board } })
 export default class TicTacToe extends Vue {
   wins: number = 0;
   draws: number = 0;
   losses: number = 0;
-  lastResultString: string = '';
+  lastResultString: string = "";
 
   cellStates: CellState[] = [];
   finished: boolean = false;
 
-  difficulty: AI.Difficulty = 'normal';
+  difficulty: AI.Difficulty = "normal";
 
   private game: Game;
   private ai: AI;
 
-  @Watch('difficulty', { immediate: true })
+  @Watch("difficulty", { immediate: true })
   onDifficultyChange(newDifficulty: AI.Difficulty) {
     if (this.ai) {
       this.ai.difficulty = newDifficulty;
@@ -66,7 +66,7 @@ export default class TicTacToe extends Vue {
     this.ai = new AI(this.game, this.difficulty);
     this.cellStates = this.game.copyBoard();
     this.finished = false;
-    this.lastResultString = '';
+    this.lastResultString = "";
   }
 
   place(index: number) {
@@ -91,17 +91,17 @@ export default class TicTacToe extends Vue {
   private finishGame() {
     this.finished = true;
 
-    switch(this.game.winner) {
+    switch (this.game.winner) {
       case Player.HUMAN:
         this.wins++;
-        this.lastResultString = 'You win! Congratulations!';
+        this.lastResultString = "You win! Congratulations!";
         break;
       case Player.AI:
-        this.lastResultString = 'The AI won. Better luck next time!';
+        this.lastResultString = "The AI won. Better luck next time!";
         this.losses++;
         break;
       default:
-        this.lastResultString = 'It\'s a draw. Have another try!';
+        this.lastResultString = "It's a draw. Have another try!";
         this.draws++;
     }
   }
@@ -109,25 +109,24 @@ export default class TicTacToe extends Vue {
 </script>
 
 <style lang="scss">
-
 .new-game {
   cursor: pointer;
   padding: 10px 20px;
   margin-top: 10px;
   background: #fff;
-  color: #0085B2;
+  color: #0085b2;
   text-decoration: none;
 
-  border: 1px solid #0085B2;
+  border: 1px solid #0085b2;
   border-radius: 4px;
 
   &:hover {
-    background: #0085B2;
+    background: #0085b2;
     color: #fff;
   }
 
   &:active {
-    box-shadow: inset 0px 0px 83px 0px rgba(0,0,0,0.38);
+    box-shadow: inset 0px 0px 83px 0px rgba(0, 0, 0, 0.38);
   }
 }
 
@@ -144,7 +143,7 @@ export default class TicTacToe extends Vue {
     text-align: center;
     font-size: 0.8em;
     cursor: pointer;
-    background: #0085B2;
+    background: #0085b2;
     color: #fff;
     border-bottom: 1px solid #00678a;
     border-top: 1px solid #00678a;
@@ -167,7 +166,7 @@ export default class TicTacToe extends Vue {
     }
 
     &:active {
-      box-shadow: inset 0px 0px 83px 0px rgba(0,0,0,0.38);
+      box-shadow: inset 0px 0px 83px 0px rgba(0, 0, 0, 0.38);
     }
 
     input {
@@ -177,11 +176,11 @@ export default class TicTacToe extends Vue {
 
   > .selected {
     cursor: default;
-    background: #FF8F19;
-    border-color: #B26009 !important;
+    background: #ff8f19;
+    border-color: #b26009 !important;
 
     &:hover {
-      background: #FF8F19;
+      background: #ff8f19;
     }
 
     &:active {
@@ -199,9 +198,9 @@ export default class TicTacToe extends Vue {
   > h2 {
     display: inline-block;
     width: 200px;
-    color: #0085B2;
+    color: #0085b2;
     font-weight: normal;
-    border-bottom: 1px solid #0085B2;
+    border-bottom: 1px solid #0085b2;
   }
 
   table {
@@ -224,11 +223,11 @@ export default class TicTacToe extends Vue {
     border-radius: 2px;
 
     &.wins {
-      background: #0085B2;
+      background: #0085b2;
     }
 
     &.losses {
-      background: #FF8F19;
+      background: #ff8f19;
     }
 
     &.draws {
@@ -237,9 +236,7 @@ export default class TicTacToe extends Vue {
   }
 }
 
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .stats {
     position: static;
     text-align: center;

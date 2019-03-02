@@ -3,8 +3,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator'
-import { CellState } from '~/plugins/tic-tac-toe/cell-state';
+import { Component, Vue, Prop } from "vue-property-decorator";
+import { CellState } from "~/plugins/tic-tac-toe/cell-state";
 
 @Component
 export default class Cell extends Vue {
@@ -17,13 +17,12 @@ export default class Cell extends Vue {
   get classNames() {
     return {
       placed: this.state !== null,
-      x: this.state === 'x',
-      o: this.state === 'o'
-    }
+      x: this.state === "x",
+      o: this.state === "o"
+    };
   }
 }
 </script>
-
 
 <style lang="scss">
 .cell {
@@ -37,11 +36,11 @@ export default class Cell extends Vue {
 
   &:not(.placed):not(:disabled):hover {
     cursor: pointer;
-    background: #0085B2;
+    background: #0085b2;
   }
 
   &:not(.placed):not(:disabled):active {
-    box-shadow: inset 0px 0px 83px 0px rgba(0,0,0,0.38);
+    box-shadow: inset 0px 0px 83px 0px rgba(0, 0, 0, 0.38);
   }
 
   &.placed {
