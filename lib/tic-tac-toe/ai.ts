@@ -34,7 +34,7 @@ class AI {
   }
 
   private getPossibleMoves(game: Game): Game[] {
-    const moves = [];
+    const moves: Game[] = [];
     let move: Game;
 
     for (let i = 0; i < 3; i++) {
