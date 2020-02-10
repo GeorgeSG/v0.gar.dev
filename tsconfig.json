@@ -1,16 +1,22 @@
 {
-  "extends": "@nuxt/typescript",
   "compilerOptions": {
-    "baseUrl": ".",
+    "target": "es6",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "lib": ["esnext", "esnext.asynciterable", "dom"],
+    "esModuleInterop": true,
     "experimentalDecorators": true,
-    "paths": {
-      "~/plugins/*": ["./plugins/*"],
-      "~/components/*": ["./components/*"],
-      "~/pages/*": ["./pages/*"],
-      "~/assets/*": ["./assets/*"]
-    },
     "strictPropertyInitialization": false,
+    "allowJs": true,
+    "sourceMap": true,
     "strict": true,
-    "types": ["@types/node", "@nuxt/vue-app"]
-  }
+    "noImplicitAny": false,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"]
+    },
+    "types": ["@types/node", "@nuxt/types"]
+  },
+  "exclude": ["node_modules"]
 }

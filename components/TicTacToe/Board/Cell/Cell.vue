@@ -1,25 +1,29 @@
 <template lang="pug">
-  input.cell(:disabled="disabled" type="button" @click="$emit('select')" :class="classNames")
+  input.cell(:disabled="disabled" type="button" @click="onSelect" :class="classNames")
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from "vue-property-decorator";
-import { CellState } from "~/plugins/tic-tac-toe/cell-state";
+import { Component, Vue, Prop } from 'vue-property-decorator';
+import { CellState } from '~/lib/tic-tac-toe/cell-state';
 
 @Component
 export default class Cell extends Vue {
   @Prop({ required: false, default: null })
-  state: CellState;
+  readonly state: CellState | null;
 
   @Prop({ required: false, default: false })
-  disabled: boolean;
+  readonly disabled: boolean;
 
   get classNames() {
     return {
       placed: this.state !== null,
-      x: this.state === "x",
-      o: this.state === "o"
+      x: this.state === 'x',
+      o: this.state === 'o'
     };
+  }
+
+  onSelect() {
+    this.$emit('select');
   }
 }
 </script>
@@ -28,15 +32,15 @@ export default class Cell extends Vue {
 .cell {
   width: 70px;
   height: 70px;
-  background: #fff;
+  background: $color-white;
   border-top: 0;
   border-left: 0;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-right: 1px solid $color-gray;
+  border-bottom: 1px solid $color-gray;
 
   &:not(.placed):not(:disabled):hover {
     cursor: pointer;
-    background: #0085b2;
+    background: $color-dark-blue;
   }
 
   &:not(.placed):not(:disabled):active {

@@ -5,21 +5,22 @@
       :key="index"
       :state="cellState"
       :disabled="finished"
-      @select="$emit('place', index)")
+      @select="$emit('place', index)"
+    )
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from "vue-property-decorator";
-import Cell from "./Cell/Cell.vue";
-import { CellState } from "~/plugins/tic-tac-toe/cell-state";
+import { Component, Vue, Prop } from 'vue-property-decorator';
+import Cell from './Cell/Cell.vue';
+import { CellState } from '~/lib/tic-tac-toe/cell-state';
 
 @Component({ components: { Cell } })
 export default class Board extends Vue {
   @Prop({ required: true })
-  cellStates: CellState[];
+  readonly cellStates: CellState[];
 
   @Prop({ required: false, default: false })
-  finished: boolean;
+  readonly finished: boolean;
 }
 </script>
 
@@ -30,8 +31,8 @@ export default class Board extends Vue {
   margin: 0 auto;
   width: 210px;
   height: 210px;
-  background: #fff;
-  border-left: 1px solid #ccc;
-  border-top: 1px solid #ccc;
+  background: $color-white;
+  border-left: 1px solid $color-gray;
+  border-top: 1px solid $color-gray;
 }
 </style>

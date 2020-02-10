@@ -1,7 +1,7 @@
-import { CellState } from "./cell-state";
-import Player from "./player";
+import { CellState } from './cell-state';
+import { Player } from './player';
 
-export default class Game {
+export class Game {
   private static readonly WINNING_STATES = [
     [0, 1, 2],
     [3, 4, 5],

@@ -2,33 +2,48 @@
   "name": "gardev.com",
   "description": "Georgi Gardev's personal website. Hosted at gardev.com",
   "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
   "author": {
     "name": "Georgi Gardev",
     "email": "georgi@gardev.com",
     "url": "http://gardev.com"
   },
-  "devDependencies": {
-    "node-sass": "^4.11.0",
-    "pug": "^2.0.3",
-    "pug-plain-loader": "^1.0.0",
-    "sass-loader": "^7.1.0",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-plugin-prettier": "^2.0.1"
+  "engines": {
+    "node": "12.15.0"
   },
-  "dependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.7.2",
-    "@fortawesome/free-solid-svg-icons": "^5.7.2",
-    "nuxt-fontawesome": "^0.4.0",
-    "nuxt-ts": "latest",
-    "vue-property-decorator": "^7.3.0"
-  },
-  "license": "UNLICENSED",
   "scripts": {
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
-    "lint": "prettier -c '**/*'",
-    "format": "prettier --write '**/*'"
+    "start": "nuxt-ts start",
+    "test": "jest",
+    "lint": "eslint --ext .ts,.js,.vue .",
+    "lint-fix": "eslint --ext .ts,.js,.vue . --fix"
+  },
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@nuxt/typescript-runtime": "^0.3.8",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "nuxt": "^2.11.0",
+    "nuxt-fontawesome": "^0.4.0",
+    "vue-property-decorator": "^8.4.0"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "^0.5.6",
+    "@nuxtjs/eslint-config-typescript": "^1.0.2",
+    "@nuxtjs/google-analytics": "^2.2.3",
+    "@typescript-eslint/eslint-plugin": "^2.19.1",
+    "@typescript-eslint/parser": "^2.19.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.19.1",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^8.0.2",
+    "tslint-config-prettier": "^1.18.0"
   }
 }

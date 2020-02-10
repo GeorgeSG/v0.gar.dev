@@ -1,9 +1,9 @@
-import Game from "./game";
+import { Game } from './game';
 
-export class AI {
+class AI {
   private static readonly INFINITY = 9;
 
-  constructor(private game: Game, public difficulty: AI.Difficulty = "normal") {}
+  constructor(private game: Game, public difficulty: AI.Difficulty = 'normal') {}
 
   move() {
     const move = this.chooseMove();
@@ -12,15 +12,15 @@ export class AI {
 
   private chooseMove(): number[] {
     switch (this.difficulty) {
-      case "easy":
+      case 'easy':
         return this.randomChoice(this.game);
-      case "normal":
+      case 'normal':
         if (this.randomInt(0, 10) > 4) {
           return this.alphabetaChoice(this.game);
         } else {
           return this.randomChoice(this.game);
         }
-      case "hard":
+      case 'hard':
         return this.alphabetaChoice(this.game);
     }
   }
@@ -134,6 +134,8 @@ export class AI {
   }
 }
 
-export namespace AI {
-  export type Difficulty = "easy" | "normal" | "hard";
+namespace AI {
+  export type Difficulty = 'easy' | 'normal' | 'hard';
 }
+
+export { AI };

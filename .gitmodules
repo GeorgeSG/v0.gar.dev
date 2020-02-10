@@ -1,6 +1,0 @@
-[submodule "sumbodules/ecmascript-explained-2019"]
-	path = sumbodules/ecmascript-explained-2019
-	url = git@github.com:GeorgeSG/ecmascript-explained-2019.git
-[submodule "submodules/ecmascript-explained-2019"]
-	path = submodules/ecmascript-explained-2019
-	url = git@github.com:GeorgeSG/ecmascript-explained-2019.git
