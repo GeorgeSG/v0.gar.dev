@@ -51,6 +51,11 @@ export default {
   netlify: {
     redirects: [
       {
+        from: '/*',
+        to: '/',
+        status: 404
+      },
+      {
         from: 'http://gardev.com/*',
         to: 'https://gar.dev/:splat',
         status: 301,
