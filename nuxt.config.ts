@@ -28,26 +28,76 @@ export default {
     ]
   },
   css: ['~/assets/styles/main.scss'],
-  modules: [
-    '@nuxtjs/style-resources',
-    [
-      'nuxt-fontawesome',
-      {
-        component: 'fa',
-        imports: [
-          {
-            set: '@fortawesome/free-solid-svg-icons',
-            icons: ['fas']
-          },
-          {
-            set: '@fortawesome/free-brands-svg-icons',
-            icons: ['fab']
-          }
-        ]
-      }
-    ]
-  ],
+  modules: ['@bazzite/nuxt-netlify', '@nuxtjs/style-resources', 'nuxt-fontawesome'],
+
   styleResources: {
     scss: ['assets/styles/variables.scss']
+  },
+
+  fontawesome: {
+    component: 'fa',
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      },
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['fab']
+      }
+    ]
+  },
+
+  netlify: {
+    redirects: [
+      {
+        from: 'http://gardev.com/*',
+        to: 'https://gar.dev/:splat',
+        status: 301,
+        force: true
+      },
+      {
+        from: 'https://gardev.com/*',
+        to: 'https://gar.dev/:splat',
+        status: 301,
+        force: true
+      },
+      {
+        from: 'http://www.gardev.com/*',
+        to: 'https://gar.dev/:splat',
+        status: 301,
+        force: true
+      },
+      {
+        from: 'https://www.gardev.com/*',
+        to: 'https://gar.dev/:splat',
+        status: 301,
+        force: true
+      },
+      {
+        from: 'http://georgi.dev/*',
+        to: 'https://gar.dev/:splat',
+        status: 301,
+        force: true
+      },
+      {
+        from: 'https://georgi.dev/*',
+        to: 'https://gar.dev/:splat',
+        status: 301,
+        force: true
+      },
+      {
+        from: 'http://www.georgi.dev/*',
+        to: 'https://gar.dev/:splat',
+        status: 301,
+        force: true
+      },
+      {
+        from: 'https://www.georgi.dev/*',
+        to: 'https://gar.dev/:splat',
+        status: 301,
+        force: true
+      }
+    ]
   }
 };
