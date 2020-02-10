@@ -1,5 +1,11 @@
-http://gardev.com/* http://gar.dev/:splat 301!
-http://www.gardev.com/* http://gar.dev/:splat 301!
+http://gardev.com/* https://gar.dev/:splat 301!
+https://gardev.com/* https://gar.dev/:splat 301!
 
-http://georgi.dev/* http://gar.dev/:splat 301!
-http://www.georgi.dev/* http://gar.dev/:splat 301!
+http://www.gardev.com/* https://gar.dev/:splat 301!
+https://www.gardev.com/* https://gar.dev/:splat 301!
+
+http://georgi.dev/* https://gar.dev/:splat 301!
+https://georgi.dev/* https://gar.dev/:splat 301!
+
+http://www.georgi.dev/* https://gar.dev/:splat 301!
+https://www.georgi.dev/* https://gar.dev/:splat 301!
