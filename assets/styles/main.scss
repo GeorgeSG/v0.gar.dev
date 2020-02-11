@@ -57,18 +57,3 @@ input[type="button"] {
     margin-top: 0.55em;
   }
 }
-
-.social {
-  color: $color-gray;
-  text-decoration: none;
-  padding: 0 4px;
-  border-radius: 5px;
-
-  &:hover {
-    color: $color-dark-blue;
-  }
-
-  &:active {
-    color: $color-dark-blue;
-  }
-}
