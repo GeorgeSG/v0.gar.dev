@@ -1,10 +1,7 @@
 <template lang="pug">
   main
     h1 Georgi Gardev
-    p
-      | Hi! I'm currently working on this page,
-      br
-      | but you can play some Tic-Tac-Toe instead!
+    p Oops. It looks like you got lost there! This page doesn't exist... yet :)
     p
       a.social(href="mailto:georgi@gardev.com" title="Send me an email!")
         fa.fa-3x(icon="envelope")
@@ -20,6 +17,4 @@
         fa.fa-3x(:icon="['fab', 'twitter']")
       a.social(href="http://www.last.fm/user/GeorgeSG" target="_blank" title="last.fm" rel="noreferrer")
         fa.fa-3x(:icon="['fab', 'lastfm']")
-
-    p Oops. It looks like you got lost there! This page doesn't exist... yet :)
 </template>
