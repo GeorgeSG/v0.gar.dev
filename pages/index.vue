@@ -31,20 +31,3 @@ import TicTacToe from '~/components/TicTacToe/TicTacToe.vue';
 @Component({ components: { TicTacToe } })
 export default class Home extends Vue {}
 </script>
-
-<style lang="scss">
-.social {
-  color: $color-gray;
-  text-decoration: none;
-  padding: 0 4px;
-  border-radius: 5px;
-
-  &:hover {
-    color: $color-dark-blue;
-  }
-
-  &:active {
-    color: $color-dark-blue;
-  }
-}
-</style>
