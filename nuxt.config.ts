@@ -28,6 +28,11 @@ export default {
     ]
   },
   css: ['~/assets/styles/main.scss'],
+
+  generate: {
+    fallback: '404.html'
+  },
+
   modules: ['@bazzite/nuxt-netlify', '@nuxtjs/style-resources', 'nuxt-fontawesome'],
 
   styleResources: {
